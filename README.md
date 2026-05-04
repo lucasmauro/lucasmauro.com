@@ -156,12 +156,6 @@ PUBLIC_GISCUS_REPO=your-handle/your-repo
 PUBLIC_GISCUS_REPO_ID=R_xxxxxxxxxxx
 PUBLIC_GISCUS_CATEGORY=Announcements
 PUBLIC_GISCUS_CATEGORY_ID=DIC_xxxxxxxxxxx
-
-# CI-only optimization flags (normally keep false).
-# The PR Checks workflow enables these automatically for faster PR builds.
-CI_SKIP_AUTO_OG_IMAGE=false
-CI_SKIP_RSS_SITEMAP=false
-CI_SKIP_CONTENT_COLLECTIONS=false
 ```
 
 You can leave `PUBLIC_GISCUS_*` as placeholders for now — the theme

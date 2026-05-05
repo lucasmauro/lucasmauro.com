@@ -334,7 +334,9 @@ Every customisable knob lives in a small number of files:
 | Layout sizing (sidebar width, etc.) | `src/styles/global.css` (custom CSS vars)      |
 | UI strings per locale               | `src/i18n/ui.ts`                               |
 | Date formatting per locale          | `src/i18n/utils.ts` → `formatDate`             |
+| ISO date formatting                 | `src/config.ts` → `SITE.isoDates`              |
 | Posts-per-page on listings          | `src/config.ts` → `SITE.postsPerPage`          |
+| Default featured images visibility  | `src/config.ts` → `SITE.showFeaturedImages`    |
 | Boxed post / page articles          | `src/config.ts` → `SITE.boxedArticles`         |
 | Listing card height behavior        | `src/config.ts` → `SITE.dynamicPostCardHeight` |
 | Privacy Policy link in footer       | `src/config.ts` → `SITE.showPrivacyPolicy`     |
@@ -548,7 +550,7 @@ See the demo **/posts/latex-math-with-katex** for a full showcase
 
 If you only publish in one language, set:
 
-```ts
+```text
 // src/config.ts
 multilingual: false,
 ```
@@ -950,13 +952,13 @@ appear in:
 
 Edit `NAV` in `src/config.ts`:
 
-```ts
+```text
 { key: 'projects', href: '/projects', icon: 'lucide:hammer' },
 ```
 
 Then add the matching i18n string in `src/i18n/ui.ts`:
 
-```ts
+```text
 en: { 'nav.projects': 'Projects', /* ... */ },
 fr: { 'nav.projects': 'Projets',  /* ... */ },
 ```

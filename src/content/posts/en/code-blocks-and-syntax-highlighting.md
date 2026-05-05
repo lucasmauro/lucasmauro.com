@@ -30,6 +30,26 @@ function greet(name: string) {
 }
 ```
 
+## Raw HTML (ashtml)
+
+If you want to write raw HTML inside a markdown code block and have it rendered directly instead of highlighted as code, use the `ashtml` language identifier. A custom remark plugin converts these blocks into raw HTML nodes at build time.
+
+````markdown
+```ashtml
+<div class="alert alert-success">
+  <span>This is raw HTML rendered beautifully!</span>
+</div>
+```
+````
+
+Renders as:
+
+```ashtml
+<div class="alert alert-success">
+  <span>This is raw HTML rendered beautifully!</span>
+</div>
+```
+
 ## Frame title
 
 Add `title="..."` to label the block — it shows in a window-style

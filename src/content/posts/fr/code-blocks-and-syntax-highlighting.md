@@ -30,6 +30,26 @@ function saluer(nom: string) {
 }
 ```
 
+## HTML Brut (ashtml)
+
+Si vous souhaitez écrire du HTML brut dans un bloc de code markdown et le faire rendre directement au lieu de le coloriser comme du code, utilisez l'identifiant de langage `ashtml`. Un plugin remark personnalisé convertit ces blocs en nœuds HTML bruts lors de la compilation.
+
+````markdown
+```ashtml
+<div class="alert alert-success">
+  <span>Voici du HTML brut rendu magnifiquement !</span>
+</div>
+```
+````
+
+Rendu final :
+
+```ashtml
+<div class="alert alert-success">
+  <span>Voici du HTML brut rendu magnifiquement !</span>
+</div>
+```
+
 ## Titre de cadre
 
 Ajoutez `title="..."` pour étiqueter le bloc — il apparaît dans une

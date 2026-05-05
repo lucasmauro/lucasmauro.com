@@ -60,7 +60,7 @@ authoring experience — without writing your own theme from scratch.
   `chirpy-dark` themes
 - **Markdown + MDX** with [Expressive Code](https://expressive-code.com)
   (syntax highlighting, frame titles, copy buttons, line markers,
-  diffs, collapsible sections), GFM, autolinked headings, callouts
+  diffs, collapsible sections), raw HTML rendering from `ashtml` blocks, GFM, autolinked headings, callouts
 - **LaTeX math** via [KaTeX](https://katex.org) (`remark-math` +
   `rehype-katex`), pre-rendered at build time. The stylesheet is
   loaded **only on pages that opt in** with `math: true` in
@@ -499,6 +499,7 @@ features:
 - **Terminal frame** — `frame="terminal"`.
 - **Word wrap** — `wrap` modifier.
 - **Collapsible sections** — `collapse={start-end}`.
+- **Raw HTML** — `ashtml` language identifier renders raw HTML.
 
 Themes (`github-light` / `github-dark-dimmed`) are bound to the
 site's `<html data-theme="...">` attribute via `themeCssSelector`,

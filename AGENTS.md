@@ -131,6 +131,8 @@ SITE.defaultLocale    // ★ The locale served at the URL root (no prefix).
 SITE.locales          // ★ Full list of enabled locales, e.g. ['en', 'fr', 'de'].
                       //   Every locale here must have: route files, content folders, i18n strings.
 SITE.postsPerPage     // Listing page size (default 8)
+SITE.isoDates         // Display ISO 8601 date format if true, otherwise locale-aware
+SITE.showFeaturedImages // Site-wide default for displaying featured images
 SITE.multilingual     // false hides language switcher + hreflang
 SITE.autoOgImage      // false disables Satori OG generation
 SITE.showPrivacyPolicy // false removes footer privacy link
@@ -702,4 +704,4 @@ conventions:
 
 ---
 
-*This file was last updated on 2026-05-04.*
+*This file was last updated on 2026-05-05.*

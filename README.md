@@ -179,7 +179,8 @@ export const SITE: SiteConfig = {
   author: {
     name: 'Your Name',
     // `url` is built automatically from PUBLIC_GITHUB_HANDLE — leave it.
-    avatar: '/images/avatar.svg',
+    // Preferred: imported local asset metadata (optimization-first path).
+    avatar: avatarImg,
     bio: 'A one-line bio shown in the sidebar.',
   },
   defaultOgImage: ogDefaultImg.src,
@@ -992,8 +993,17 @@ Edit the keydown handler at the bottom of
 
 ### Replace the avatar
 
-Drop a new file at `src/assets/images/site/avatar.svg` (or change the import in
-`SITE.author.avatar` in `src/config.ts`).
+Drop a new file at `src/assets/images/site/avatar.svg` and keep
+`SITE.author.avatar` as the imported asset object in `src/config.ts`.
+
+If you need a fixed public URL or external CDN URL, `SITE.author.avatar`
+also accepts a string path/URL (for example `/images/avatar.png` or
+`https://cdn.example.com/avatar.jpg`) and falls back to a plain `<img>`.
+
+### Replace the favicon
+
+Replace `src/assets/images/site/favicon.svg` with your own file.
+The favicon link is wired in `src/layouts/BaseLayout.astro` via an imported asset.
 
 ### Control listing card height (fixed vs dynamic)
 

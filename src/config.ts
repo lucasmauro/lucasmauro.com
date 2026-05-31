@@ -50,16 +50,15 @@ export const SITE: SiteConfig = {
   // ==========================================
 
   /** Default site title used as homepage <title> and meta. */
-  title: 'Chirping Astro',
+  title: 'Lucas Mauro',
   /** Site tagline / description. */
-  description:
-    'A modern, multilingual Astro v6 theme inspired by Chirpy — built with Tailwind v4, daisyUI, MDX, Pagefind, and Giscus.',
+  description: 'Software engineering topics.',
   /** Author/handle shown in footer + meta. */
   author: {
-    name: 'Chirping Astro',
+    name: 'Lucas Mauro',
     url: GITHUB_HANDLE ? `https://github.com/${GITHUB_HANDLE}` : undefined,
     avatar: avatarImg,
-    bio: 'A text-focused Astro V6 theme.',
+    bio: 'Software Engineer',
   },
   /** Default OG image. */
   defaultOgImage: ogDefaultImg.src,
@@ -76,21 +75,21 @@ export const SITE: SiteConfig = {
   /** Automatically generate Open Graph images for posts that don't have a `heroImage`. */
   autoOgImage: true,
   /** Show a link to the Privacy Policy page in the footer. */
-  showPrivacyPolicy: true,
+  showPrivacyPolicy: false,
   /** Footer text/link controls. */
   footer: {
     /**
      * Optional full override for the left footer line. Supports {year} and {author}.
      * Default when undefined: "© {year} {author}. All rights reserved." (+ Privacy Policy link if enabled).
      */
-    leftText: undefined,
+    leftText: `{author}, {year} — ${CONTACT_EMAIL}`,
     /**
      * Optional custom text before the theme link on the right footer line.
      * Default when undefined: "Powered by Astro · Theme <themeName>".
      */
     rightText: undefined,
     /** Whether to show the Privacy Policy link in the footer. */
-    showPrivacyPolicy: true,
+    showPrivacyPolicy: false,
     /** Whether to show theme credits in the footer right side. Theme <themeName> */
     showThemeCredits: true,
     /** Label for the theme repository link in the right footer line. */
@@ -112,11 +111,12 @@ export const SITE: SiteConfig = {
   /** Default locale. Changing this is a breaking, atomic, multi-file operation. */
   defaultLocale: 'en',
   /** Show the language switcher and link to translated pages. */
-  multilingual: true,
+  multilingual: false,
 };
 
 export const NAV: readonly NavItem[] = [
   { key: 'home', href: '/', icon: 'lucide:home' },
+  { key: 'search', href: '/search', icon: 'lucide:search' },
   { key: 'categories', href: '/categories', icon: 'lucide:layers' },
   { key: 'tags', href: '/tags', icon: 'lucide:tag' },
   { key: 'archives', href: '/archives', icon: 'lucide:archive' },

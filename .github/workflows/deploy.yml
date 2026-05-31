@@ -15,9 +15,16 @@ jobs:
       - run: bun install --frozen-lockfile
       - run: bun run build
         env:
-          SITE_URL: https://your-domain.com
+          SITE_URL: ${{ vars.SITE_URL }}
+          BASE_PATH: ${{ vars.BASE_PATH }}
           PUBLIC_GITHUB_HANDLE: ${{ vars.PUBLIC_GITHUB_HANDLE }}
           PUBLIC_GITHUB_REPO: ${{ vars.PUBLIC_GITHUB_REPO }}
+          PUBLIC_CONTACT_EMAIL: ${{ vars.PUBLIC_CONTACT_EMAIL }}
+          PUBLIC_GISCUS_ENABLED: ${{ vars.PUBLIC_GISCUS_ENABLED }}
+          PUBLIC_GISCUS_REPO: ${{ vars.PUBLIC_GISCUS_REPO }}
+          PUBLIC_GISCUS_REPO_ID: ${{ vars.PUBLIC_GISCUS_REPO_ID }}
+          PUBLIC_GISCUS_CATEGORY: ${{ vars.PUBLIC_GISCUS_CATEGORY }}
+          PUBLIC_GISCUS_CATEGORY_ID: ${{ vars.PUBLIC_GISCUS_CATEGORY_ID }}
       - uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}

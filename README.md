@@ -1189,7 +1189,7 @@ against full site output.
 
 ## License
 
-MIT.
+![License: MIT](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)
 
 ---
 

@@ -327,7 +327,8 @@ not work in `dev`** — only after `bun run build`. This is by design.
     └── utils/
         ├── posts.ts           # Collection helpers, sort, filter
         ├── reading-time.ts
-        └── seo.ts
+        ├── seo.ts
+        └── slugify.ts         # Unicode-aware tag/category URL slugifier
 ```
 
 ---
@@ -807,6 +808,7 @@ copy-to-clipboard buttons.
 | `bun run build`     | `astro build` then `pagefind --site dist`  |
 | `bun run preview`   | Preview the production build               |
 | `bun run typecheck` | `astro check` (TS + Astro)                 |
+| `bun run test`      | Run tests with Bun's built-in test runner  |
 | `bun run lint`      | ESLint (zero warnings allowed)             |
 | `bun run format`    | Prettier write                             |
 | `bun run pagefind`  | Re-run Pagefind only (after `astro build`) |
@@ -1187,7 +1189,7 @@ against full site output.
 
 ## License
 
-MIT.
+![License: MIT](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)
 
 ---
 
